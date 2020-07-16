@@ -44,4 +44,8 @@ defmodule ExAlpaca.Rest.HTTPClient do
     data = Jason.decode!(body)
     {:ok, data}
   end
+
+  defp parse_response({:error, %HTTPoison.Error{id: _, reason: reason}}) do
+    {:error, reason}
+  end
 end
