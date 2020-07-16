@@ -16,7 +16,7 @@ defmodule ExAlpaca.Rest.Assets do
     {:ok, assets}
   end
 
-  defp parse_reponse({:error, reason}) do
+  defp parse_response({:error, reason}) do
     {:error, reason}
   end
 end
